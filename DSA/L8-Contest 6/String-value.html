@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Given a string S of all lowercase letters and each letter has a value of its own.<br>
+        The value of the alphabet a is 1,b is 2,c is 3..... till z is 26.<br>
+        Now you have to find the total value of the given string. The total value of a string is the sum of values of all characters present in string.
+    </h1>
+    <script>
+        let str = "aba";
+        let lowercase = "abcdefghijklmnopqrstuvwxyz";
+        let sum = 0;
+        for(let i=0; i<str.length; i++){
+            for(let j=0; j<26; j++){
+                if(str[i]==lowercase[j]){
+                    sum = sum + j+1;
+                }
+            }
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

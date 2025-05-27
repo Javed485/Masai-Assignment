@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given a numbernumstored in a variable with the name num<br>
+        You have to find the sum of firstnumnatural numbers in the range of1 to num, including the value stored in num itself, but each number should be added twice<br>
+        For example, consider the value stored in num = 3, therefore, the sum of first num natural numbers is sum = 1 + 2 + 3, but each number has to be added twice<br>
+        Therefore,sum = 1 + 1 + 2 + 2 + 3 + 3 = 12, which is the required answer
+    </h1>
+    <script>
+        let num = 3;
+        let sum = 0;
+        for(let i=1; i<=num; i++){
+            sum = sum + i + i;
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

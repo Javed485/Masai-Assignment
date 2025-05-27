@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given an arr which has N integers.<br>
+        Write a program to print the ceil of average of integers present in the array.<br>
+        Note:- The ceil value of the given whole number K is the smallest integer value greater or equal to a K.<br>
+        For example:-<br>
+        if the value of K = 3.679, the ceil value of K is 4<br>
+        if the value of K = 5, the ceil value of K is 5
+    </h1>
+    <script>
+        let arr = [2,5,0,8];
+        let sum = 0;
+        let avg = 0;
+        for(let i=0; i<=arr.length-1; i++){
+            sum = sum + arr[i];
+            avg++;
+        }
+        console.log(Math.ceil(sum/avg));
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Card</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+        }
+        #container > div{
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+        }
+        #container > div >img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Total Items: <span></span></h1>
+    <h2>Total Price: <span></span></h2>
+    <div id="container"></div> 
+</body>
+</html>
+<script>
+    let cartProducts = JSON.parse(localStorage.getItem("cart_times"));
+
+    let totalPrice = cartProducts.reduce(function(acc,el){
+        let sum = Number(acc) + Number(el.price);
+        return sum;
+    },0);
+
+    document.querySelector("h2>span").innerText = totalPrice;
+    document.querySelector("h1>span").innerText = cartProducts.length;
+
+    cartProducts.forEach(function(el){
+        // Create Div
+        let productCard = document.createElement("div");
+        // Create Image
+        let productImg = document.createElement("img");
+        productImg.src = el.imgSrc;
+        // Create H3
+        let productTitle = document.createElement("h3");
+        productTitle.innerText = el.title;
+        // Create P
+        let productPrice = document.createElement("p");
+        productPrice.innerText = el.price;
+
+        productCard.append(productImg, productTitle, productPrice);
+        document.querySelector("#container").append(productCard);
+    });
+</script>

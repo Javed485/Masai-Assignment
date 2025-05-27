@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Write a function isOdd which returns a boolean value based on the number is odd or not<br>
+        Use this function to print the odd numbers from 0 to a given limit(included).
+    </h2>
+    <script>
+        // function odd(x){
+        //     if(x%2 != 0){
+        //         console.log('true'); 
+        //     }else{
+        //         console.log('false');
+        //     }
+        // }
+        // odd(3);
+        
+        function isodd(x,y){
+            for(let i=x; i<=y; i++){
+                if(i%2 != 0){
+                    document.write(i+"<br>");
+                }
+            }
+        }
+        isodd(1,10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        img{
+            width: 70%;
+        }
+        button{
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../images/puppy.jpg" alt="">
+        <br>
+        <h1>Like Count: <span></span></h1>
+        <h2>Dislike Count: <span></span></h2>
+        <button onclick="like()">Like</button>
+        <button onclick="dislike()">Dislike</button>
+    </div>
+</body>
+</html>
+<script>
+    let countLike;
+    if(localStorage.getItem("Likes") == null){
+        countLike = 0;
+    }else {
+        countLike = localStorage.getItem("Likes");
+    }
+
+    let countDislike = localStorage.getItem("disLikes") || 0;
+    // let countDislike;
+    // if(localStorage.getItem("disLikes") == null){
+    //     countDislike = 0;
+    // }else {
+    //     countDislike = localStorage.getItem("disLikes");
+    // }
+    
+    document.querySelector("h1>span").innerText = countLike;
+    document.querySelector("h2>span").innerText = countDislike;
+
+    function like(){
+        // countLike = Number(countLike) + 1;
+        countLike ++;
+        document.querySelector("h1>span").innerText = countLike;
+        localStorage.setItem("Likes",countLike);
+    }
+
+    function dislike(){
+        countDislike --;
+        document.querySelector("h2>span").innerText = countDislike;
+        localStorage.setItem("disLikes",countDislike);
+    }
+</script>

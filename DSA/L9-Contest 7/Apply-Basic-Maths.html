@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given an array A with N elements. You are allowed toremove only one element, which makes the sum of all the remaining elements exactly divisible by 7.<br>
+    Your task is to find the first index of smallest element that can be removed from array. If there is no answer print-1</h1>
+    <script>
+        let n = 5;
+        let a =[14,7,8,2,4];
+        let sum = 0;
+        let min = Infinity;
+        for(let i=0; i<n; i++){
+            sum += a[i];
+        }
+        for(let j=0; j<n; j++){
+            sum -= a[j];
+            if(sum % 7 == 0 && sum < min){
+                
+                sum += a[j];
+            }else{
+                sum += a[j];
+            }
+        }
+        // console.log(sum);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>// Given a string swap the case and print the output<br>
+        // Sample Input - Test<br>
+        // Sample Output - tEST
+    </h2>
+    <script>
+        function convert(char){
+            let lower='abcdefghijklmnopqrstuvwxyz';
+            let upper='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let new_word='';
+            for(let i=0; i<=char.length-1; i++){
+                for(let j=0; j<26; j++){
+                    if(char[i]==upper[j]){
+                        new_word+=lower[j];
+                    }if(char[i]==lower[j]){
+                        new_word+=upper[j];
+                    }
+                }
+            }
+            console.log(new_word);
+        };
+        convert('TEST');
+    </script>
+</body>
+</html>

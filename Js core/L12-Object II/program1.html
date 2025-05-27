@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Two array convert into single array.</h2>
+    <script>
+        let str = ["Nurpul", "Prateek", "Aman", "Albert", "Yogesh"];
+        let num = [32, 30, 26, 28, 44];
+        let arr = [];
+        for(let i=0; i<=str.length-1; i++){
+            let obj = {};
+            obj["name"]=str[i];
+            obj["age"]=num[i];
+            arr.push(obj);
+        }
+        // console.log(arr);
+        for(let i=0; i<=arr.length-1; i++){
+            if(arr[i]["age"]>30){
+                console.log(arr[i]["name"]);
+            }
+        }
+    </script>
+</body>
+</html>

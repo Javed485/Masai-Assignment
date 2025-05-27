@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Given a string in lower case convert it to upper case.</h2>
+    <script>
+        // convert string into an array
+        let str = "javed";
+        let arr = [];
+        for(let i=0; i<=str.length-1; i++){
+            arr.push(str[i]);
+        }
+        // change the Value
+        arr[0] = "J";
+        arr[1] = "A";
+        arr[2] = "V";
+        arr[3] = "E";
+        arr[4] = "D";
+        // convert the array into an string
+        let bag = "";
+            for(let i = 0; i<=arr.length-1; i++){
+                bag = bag + arr[i];
+            }
+        console.log(bag);
+    </script>
+    <!-- <script>
+        let str1 = "javed";
+        console.log(str1.toUpperCase());
+    </script> -->
+</body>
+</html>

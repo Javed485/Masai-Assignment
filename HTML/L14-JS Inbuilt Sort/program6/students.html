@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Students</title>
+    <style>
+      body{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        .navbar > a{
+            text-decoration: none;
+            color: black;
+        }  
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+            margin-top: 50px;
+        }
+        th,
+        td {
+            padding: 15px;
+        }
+        tr > th {
+            background-color: teal;
+            color: white;   
+        }
+        .selectbox{
+          width: 10%;
+          margin: auto;
+          margin-top: 20px;
+        }
+        #filter{
+          height: 30px;
+          border-radius: 5px;
+          font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="./index.html"><h1>Add Students</h1></a>
+      <a href="./students.html"><h1>Students Database</h1></a>
+      <a href="./admitted.html"><h1>Admitted</h1></a>
+      <a href="./rejected.html"><h1>Rejected</h1></a>
+    </div>
+    <div class="selectbox">
+      <select id="filter" onchange="filterCourse()">
+        <option value="">Filter By Course</option>
+        <option value="Web-Development">Web-Development</option>
+        <option value="Android-Development">Android-Development</option>
+        <option value="Data-Analitics">Data-Analitics</option>
+      </select>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Course</th>
+          <th>Gender</th>
+          <th>Phone</th>
+          <th>Admitted</th>
+          <th>Rejected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table Rows should be appended Here  -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let stdData =  JSON.parse(localStorage.getItem("admission")) || [];
+    // console.log(stdData);
+
+    let admittedArr = JSON.parse(localStorage.getItem("admission-accepted")) || [];
+
+    let rejectedArr = JSON.parse(localStorage.getItem("admission-rejected")) || [];
+
+    displayTable(stdData);
+    function displayTable(res){
+      document.querySelector("tbody").innerText = "";
+      res.forEach(function(el,i){
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.innerText = el.u_name;
+
+        let td2 = document.createElement("td");
+        td2.innerText = el.u_email;
+
+        let td3 = document.createElement("td");
+        td3.innerText = el.u_phone;
+
+        let td4 = document.createElement("td");
+        td4.innerText = el.u_gender;
+
+        let td5 = document.createElement("td");
+        td5.innerText = el.u_course;
+
+        let td6 = document.createElement("td");
+        td6.innerText = "Accepted";
+        td6.style.color = "white";
+        td6.style.backgroundColor = "green";
+        td6.style.cursor = "pointer";
+        td6.addEventListener("click", function(){
+          addStd(el,i);
+        })
+
+        let td7 = document.createElement("td");
+        td7.innerText = "Deleted";
+        td7.style.color = "white";
+        td7.style.backgroundColor = "red";
+        td7.style.cursor = "pointer";
+        td7.addEventListener("click", function(){
+          deleteStd(el,i);
+        })
+
+        tr.append(td1, td2, td5, td4, td3, td6, td7);
+        document.querySelector("tbody").append(tr);
+      });
+    }
+
+    // ADD DATA IN ADMITTED
+    function addStd(el,i){
+      admittedArr.push(el);
+      localStorage.setItem("admission-accepted", JSON.stringify(admittedArr));
+
+      stdData.splice(i,1);
+      localStorage.setItem("admission",JSON.stringify(stdData));
+      displayTable(stdData);
+    }
+
+    // DELETE STUDENT ROW
+    function deleteStd(el,i){
+      rejectedArr.push(el);
+      localStorage.setItem("admission-rejected", JSON.stringify(rejectedArr));
+
+      stdData.splice(i,1);
+      localStorage.setItem("admission",JSON.stringify(stdData));
+      displayTable(stdData);
+    }
+
+    // FILTER BY COURSE
+    function filterCourse(){
+      let selected = document.querySelector("#filter").value;
+      let sel = stdData.filter(function(el){
+        return el.u_course == selected;
+      })
+      displayTable(sel);
+    }
+  </script>
+</html>

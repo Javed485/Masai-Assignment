@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Given a square matrix print both the diagonals.</h2>
+    <script>
+        let arr=[
+                [1,2,3],
+                [4,5,6],
+                [7,8,9]
+                ];
+        let raw = arr.length;
+        let col = arr[0].length;
+        // left diagonal
+        for(i=0;i<raw;i++){
+            for(j=0;j<col;j++){
+                if(i==j){
+                    console.log(arr[i][j]);
+                }
+            }
+        };
+        // right daigonal
+        for(i=0;i<raw;i++){
+            for(j=0;j<col;j++){
+                if(i+j==2){
+                console.log(arr[i][j]);
+                }
+            }
+        };
+    </script>
+</body>
+</html>

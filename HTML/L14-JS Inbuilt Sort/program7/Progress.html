@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>Web20-C4</title>
+    <link rel="stylesheet" href="./Styles/index.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Masai Task List</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./dashboard.html">
+          <h2>Dashboard</h2>
+        </a>
+        <a href="./Progress.html">
+          <h2>In-Progress</h2>
+        </a>
+        <a href="./Done.html">
+          <h2>Done</h2>
+        </a>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Priority</th>
+          <th>Add To Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Update the rows here using jsvascript -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let progressArr = JSON.parse(localStorage.getItem("priority-list")) || [];
+    //console.log(progressArr);
+
+    let addProritysArr = JSON.parse(localStorage.getItem("done-list")) || [];
+
+    displayTable(progressArr);
+    function displayTable(res){
+      document.querySelector("tbody").innerHTML = "";
+        res.forEach(function(el,i){
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.innerText = el.t_name;
+
+        let td2 = document.createElement("td");
+        td2.innerText = el.t_desc;
+
+        let td3 = document.createElement("td");
+        td3.innerText = el.t_start;
+
+        let td4 = document.createElement("td");
+        td4.innerText = el.t_end;
+
+        let td5 = document.createElement("td");
+        td5.innerText = el.t_priority;
+
+        let td6 = document.createElement("td");
+        td6.innerText = "Add"; 
+        td6.style.cursor = "pointer";
+        td6.addEventListener("click", function(){
+          addPrority(el,i);
+        })
+
+        tr.append(td1, td2, td3, td4, td5, td6);
+        document.querySelector("tbody").append(tr);
+        });
+      }
+
+    // ADD PRORITY DATA
+    function addPrority(el,i){
+      // console.log(el);
+      addProritysArr.push(el);
+      localStorage.setItem("done-list",JSON.stringify(addProritysArr));
+
+      progressArr.splice(i,1);
+      localStorage.setItem("priority-list",JSON.stringify(progressArr));
+      displayTable(progressArr);
+    }
+  </script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejected</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        .navbar > a{
+            text-decoration: none;
+            color: black;
+        }  
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+            margin-top: 50px;
+        }
+        th,
+        td {
+            padding: 15px;
+        }
+        tr > th {
+            background-color: teal;
+            color: white;   
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index.html">
+            <h1>Add Students</h1>
+        </a>
+        <a href="./students.html">
+            <h1>Students Database</h1>
+        </a>
+        <a href="./admitted.html">
+            <h1>Admitted</h1>
+        </a>
+        <a href="./rejected.html">
+            <h1>Rejected</h1>
+        </a>
+    </div>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Gender</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- All the rows should be appended here  -->
+        </tbody>
+    </table>
+</body>
+<script>
+    let rejectedData =  JSON.parse(localStorage.getItem("admission-rejected"));
+    console.log(rejectedData);
+
+    displayTable(rejectedData);
+    function displayTable(res){
+        res.forEach(function(el,i){
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.innerText = el.u_name;
+
+        let td2 = document.createElement("td");
+        td2.innerText = el.u_email;
+
+        let td3 = document.createElement("td");
+        td3.innerText = el.u_phone;
+
+        let td4 = document.createElement("td");
+        td4.innerText = el.u_gender;
+
+        let td5 = document.createElement("td");
+        td5.innerText = el.u_course;
+
+        tr.append(td1, td2, td5, td4, td3);
+        document.querySelector("tbody").append(tr);
+        });
+    }
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Change Variable Value</h2>
+    <script>
+        let name = "Ronaldo";
+        let bag = "";
+        for(let i = 0; i<=name.length-1; i++){
+            if(name[i] == 'R' && i == 0){
+                bag = bag + 'D';
+            }else{
+                bag = bag + name[i];
+            }
+        }
+        document.write(bag);
+    </script>
+</body>
+</html>

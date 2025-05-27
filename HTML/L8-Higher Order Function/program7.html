@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ou have an array of objects that stores firstName and lastName values of your friends as follows:<br>
+        let users = [<br>
+            { firstName: "Nrupul", lastName: "Dev", place: "Banglore" },<br>
+            { firstName: "Prateek", lastName: "Shukla", place: "Banglore" },<br>
+            { firstName: "Yogesh", lastName: "Bhat", place: "Kolkata" },<br>
+        ];<br>
+        use the map() method to iterate over the array and join the values of firstName and lastName as follows<br>
+        Output should look like<br>
+        ["Nrupul Dev", "Prateek Shukla", "Yogesh Bhat"]
+    </h2>
+    <script>
+        let users = [
+                    { firstName: "Nrupul", lastName: "Dev", place: "Banglore" },
+                    { firstName: "Prateek", lastName: "Shukla", place: "Banglore" },
+                    { firstName: "Yogesh", lastName: "Bhat", place: "Kolkata" }
+                ];
+        let res = users.map(function(el,i){
+            let x = el.firstName + " " + el.lastName;
+            return x;
+        })   
+        console.log(res);
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Data</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+        }
+        #container > div{
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+        }
+        #container > div >img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <select id="price" onchange="cartPrice()">
+        <option value="">Price</option>
+        <option value="ASC">ASC</option>
+        <option value="DSC">DSC</option>
+    </select>
+
+    <select id="name" onchange="cartName()">
+        <option value="">Name</option>
+        <option value="ASC">ASC</option>
+        <option value="DSC">DSC</option>
+    </select>
+
+    <select id="brand" onchange="cartBrand()">
+        <option value="">Brand</option>
+        <option value="All">All</option>
+        <option value="Zara">Zara</option>
+        <option value="Adidas">Adidas</option>
+        <option value="Spykar">Spykar</option>
+        <option value="Puma">Puma</option>
+        <option value="Noise">Noise</option>
+    </select>
+
+    <a href="add to cart.html"><button>Go to Cart</button></a>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    let product = [
+                {
+                    id: 1,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Body Oil",
+                    price: "899",
+                    button: "Add to Cart",
+                    brand: "Zara"
+                },
+                {
+                    id: 2,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Shampoo",
+                    price: "999",
+                    button: "Add to Cart",
+                    brand: "Adidas"
+                },
+                {
+                    id: 3,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Face cream",
+                    price: "799",
+                    button: "Add to Cart",
+                    brand: "Spykar"
+                },
+                {
+                    id: 4,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Body Oil",
+                    price: "499",
+                    button: "Add to Cart",
+                    brand: "Puma"
+                },
+                {
+                    id: 5,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Shampoo",
+                    price: "599",
+                    button: "Add to Cart",
+                    brand: "Noise"
+                },
+                {
+                    id: 6,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Face cream",
+                    price: "699",
+                    button: "Add to Cart",
+                    brand: "Noise"
+                },
+                {
+                    id: 7,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Body Oil",
+                    price: "399",
+                    button: "Add to Cart",
+                    brand: "Levis"
+                },
+                {
+                    id: 8,
+                    imgSrc: "../../images/p1.jpg",
+                    title: "Facewash",
+                    price: "299",
+                    button: "Add to Cart",
+                    brand: "Levis"
+                }
+            ];
+    // let cartArr = JSON.parse(localStorage.getItem("cart_times")) || [];     
+    let cartArr = [];
+    let container = document.querySelector("#container");
+
+    displayCard(product);
+    function displayCard(res){
+        container.innerHTML = null;
+        res.forEach(function(el){
+        // Create Div
+        let productCard = document.createElement("div");
+        // Create Image
+        let productImg = document.createElement("img");
+        productImg.src = el.imgSrc;
+        // Create H3
+        let productTitle = document.createElement("h3");
+        productTitle.innerText = el.title;
+        // Create P
+        let productPrice = document.createElement("p");
+        productPrice.innerText = el.price;
+        // brand
+        let productBrand = document.createElement("h3");
+        productBrand.innerText = el.brand;
+        // Create Button
+        let btn = document.createElement("button");
+        btn.innerText = el.button;
+        btn.addEventListener("click", function(){
+            addToCart(el);
+        })
+
+        productCard.append(productImg, productTitle, productPrice, productBrand, btn);
+        container.append(productCard);
+        });
+    }
+    
+    // SORTING BY PRICE
+    function cartPrice(){
+        let selected = document.querySelector("#price").value;
+        if(selected == "ASC"){
+            product.sort(function (a, b){
+                return a.price - b.price;
+            });
+        displayCard(product);
+        }
+        else {
+            product.sort(function(a, b){
+                return b.price - a.price;
+            });
+        displayCard(product);
+        }
+    }
+    
+    // SORTING BY NAME
+    function cartName(){
+        let selected = document.querySelector("#name").value;
+        if(selected == "ASC"){
+            product.sort(function (a, b){
+                if(a.title > b.title) return 1;
+                if(a.title < b.title) return -1;
+                return 0;
+            });
+        displayCard(product);
+        console.log(product);
+        }
+        if(selected == "DSC"){
+            product.sort(function(a, b){
+                if(a.title > b.title) return -1;
+                if(a.title < b.title) return 1;
+                return 0;
+            });
+        displayCard(product);
+        console.log(product);
+        }
+    }
+
+    // FILTER BY CATEGORY
+    function cartBrand(){
+        let selected = document.querySelector("#brand").value;
+        // let selectedAll = product.filter(function(el){
+        //     return el.brand != selected;
+        // })
+        if(selected == "All"){
+            console.log(product);
+            displayCard(product);
+        }
+        let selectedZara = product.filter(function(el){
+            return el.brand == selected;
+        })
+        displayCard(selectedZara);
+        let selectedAdida = product.filter(function(el){
+            return el.brand == selected;
+        })
+        displayCard(selectedAdida);
+        let selectedSpykar = product.filter(function(el){
+            return el.brand == selected;
+        })
+        displayCard(selectedSpykar);
+        let selectedPuma = product.filter(function(el){
+            return el.brand == selected;
+        })
+        displayCard(selectedPuma);
+        let selectedNoise = product.filter(function(el){
+            return el.brand == selected;
+        })
+        displayCard(selectedNoise);
+    }
+
+    // ADD TO CART
+    function addToCart(el){
+        cartArr.push(el);
+        localStorage.setItem("cart_times", JSON.stringify(cartArr));
+    }
+</script>

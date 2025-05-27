@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Given an array of numbers, return the elements that have even index (starting the count at 0) and are even
+        Use Higher-order functions<br>
+        Sample Input - [2, 4, 5, 3, 6, 8]<br>
+        Sample Output - [2, 6]
+    </h2>
+    <script>
+        let arr = [2,4,5,3,6,8];
+        let res = arr.filter(function(el,i){
+            return el%2 == 0 && i%2 == 0;
+        })
+        console.log(res);
+    </script>
+</body>
+</html>

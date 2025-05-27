@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are provided the highest runs,N, ever scored in a cricket match till now, which is current highest record.
+        You are also given current runs,M scored by Sachin (Tendulkar) in a today's match.<br>
+        If Sachin breaks current record in that match, print Broken.<br>
+        If Sachin could not break that record, print Not Yet.<br>
+        If Sachin score exactly as current highest record, print Wao.
+    </h1>
+    <script>
+        let n = 264;
+        let m = 200;
+        if(m > n){
+            console.log("Broken");
+        }else if(m < n){
+            console.log("not Yet");
+        }else if(m == n){
+            console.log("Wao");
+        }
+    </script>
+</body>
+</html>

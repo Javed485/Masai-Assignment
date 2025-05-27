@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #header{
+            width: 45%;
+            margin: auto;
+            text-align: center;
+            line-height: 18px;
+            font-weight: bold;
+        }
+        #doctors{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            display: grid;
+            margin-top: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            justify-content: space-around;
+            gap: 25px;
+        }
+        #doctors > div{
+            text-align: center;
+            line-height: 15px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+        }
+        #doctors > div > img{
+            width: 100%;
+        }
+        #doctors > div > h3{
+            font-weight: bold;
+        }
+        #doctors > div > h6{
+            font-weight: bold;
+            margin-top: -10px;
+        }
+        #doctors > div > p{
+            padding: 0px 30px;
+        }
+        #doctors > div > #button{
+            width: 90%;
+            margin: auto;
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #button > button{
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+        #button > button:nth-child(1){
+            color: #339cec;
+        }
+        #button > button:nth-child(2){
+            background-color: #ff7358;    
+            color: white;
+        }
+        #button > button:nth-child(1):hover{
+            color: #000;
+            background-color: skyblue;
+        }
+        #button > button:nth-child(2):hover{
+            background-color: #b82f13;
+            color: white;
+        }
+        #service{
+            width: 85%;
+            height: auto;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px;
+        }
+        #service > div{
+            text-align: center;
+            padding: 0px 30px;
+            font-weight:700;
+        }
+        /* Small screens */
+        @media all and (max-width: 450px) {
+            #header{
+                width: 90%;
+            }
+            #doctors{
+                grid-template-columns: repeat(1,1fr);
+            }
+            #service{
+                grid-template-columns: repeat(1,1fr);
+            }
+            #service > div{
+                padding: 0px;
+            }
+        }
+        /* Medium screens */
+        @media all and (min-width: 451px) and (max-width: 768px) {
+            #header{
+                width: 90%;
+            }
+            #doctors{
+                grid-template-columns: repeat(2,1fr);
+            }
+            #service{
+                grid-template-columns: repeat(2,1fr);
+            }
+            #service > div{
+                padding: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Our Specialist</h1>
+        <p>
+            Green above he cattle god saw day multiply under fill in the cattle fowl
+            a all, living, tree word link available in the service for subdue fruit.
+        </p>
+    </div>
+    <!-- Top-section -->
+    <div id="doctors">
+    <!-- This section should have 4 child divs, each div should have image,h3,h6 and div for buttons -->
+        <div>
+            <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" />
+            <h3>ETHEL DAVIS</h3>
+            <h6>SR.FACULTY DATA SCIENCE</h6>
+            <p>If you are looking at blank casetless on the web you may be vary confused at the</p>
+            <div id="button">
+                <button>Know More</button>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" />
+            <h3>ETHEL DAVIS</h3>
+            <h6>SR.FACULTY DATA SCIENCE</h6>
+            <p>If you are looking at blank casetless on the web you may be vary confused at the</p>
+            <div id="button">
+                <button>Know More</button>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" />
+            <h3>ETHEL DAVIS</h3>
+            <h6>SR.FACULTY DATA SCIENCE</h6>
+            <p>If you are looking at blank casetless on the web you may be vary confused at the</p>
+            <div id="button">
+                <button>Know More</button>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" />
+            <h3>ETHEL DAVIS</h3>
+            <h6>SR.FACULTY DATA SCIENCE</h6>
+            <p>If you are looking at blank casetless on the web you may be vary confused at the</p>
+            <div id="button">
+                <button>Know More</button>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom section  -->
+    <div id="service">
+    <!-- This section should have 6 child divs, each div should have image,h5,p -->
+        <div>
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" />
+            <h5>Teeth Whitening</h5>
+            <p>In pretium neque a libero congue. Elit diam lectus. present latina vitaya sit mattis moollis maximus</p>
+        </div>
+        <div>
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" />
+            <h5>Teeth Whitening</h5>
+            <p>In pretium neque a libero congue. Elit diam lectus. present latina vitaya sit mattis moollis maximus</p>
+        </div>
+        <div>
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" />
+            <h5>Teeth Whitening</h5>
+            <p>In pretium neque a libero congue. Elit diam lectus. present latina vitaya sit mattis moollis maximus</p>
+        </div>
+        <div>
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" />
+            <h5>Teeth Whitening</h5>
+            <p>In pretium neque a libero congue. Elit diam lectus. present latina vitaya sit mattis moollis maximus</p>
+        </div>
+        <div>
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" />
+            <h5>Teeth Whitening</h5>
+            <p>In pretium neque a libero congue. Elit diam lectus. present latina vitaya sit mattis moollis maximus</p>
+        </div>
+        <div>
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" />
+            <h5>Teeth Whitening</h5>
+            <p>In pretium neque a libero congue. Elit diam lectus. present latina vitaya sit mattis moollis maximus</p>
+        </div>
+    </div>
+</body>
+</html>

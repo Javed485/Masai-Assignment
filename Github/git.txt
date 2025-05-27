@@ -1,0 +1,20 @@
+Repo Github to VS Code 
+
+Step 1) Open Terminal & git clone URL
+Step 2) create file or folder
+Step 3) cd (Change Directory)
+Step 4) git add .
+Step 5) git commit -m "message"
+Step 6) git push origin master
+
+
+Branch Command
+1.) Create Branch = git checkout [branch name]
+2.) Show all Branch = git branch
+3.) Switch Branch = git checkout [branch name]
+4.) Shortcut to create branch and switch = git checkout -b [branch name]
+5.) Two branch merge = git merge [branch name]
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create a mini calculator application, which has following functionalities
+    Addition
+    Subtraction
+    Division
+    Multiplication -->
+    <h1>Mini Calculator</h1>
+    <input type="number" id="num1" placeholder="Enter 1st Number">
+    <input type="number" id="num2" placeholder="Enter 2nd Number">
+    <br><br>
+    <button onclick="addition()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+</body>
+</html>
+<script>
+    function addition(){
+        let f_num = document.getElementById("num1").value;
+        let s_num = document.getElementById("num2").value;
+        let sum = +f_num + +s_num;
+        alert(sum);
+    }
+    function subtract(){
+        let f_num = document.getElementById("num1").value;
+        let s_num = document.getElementById("num2").value;
+        let sub = f_num - s_num;
+        alert(sub);
+    }
+    function multiply(){
+        let f_num = document.getElementById("num1").value;
+        let s_num = document.getElementById("num2").value;
+        let mul = f_num * s_num;
+        alert(mul);
+    }
+    function divide(){
+        let f_num = document.getElementById("num1").value;
+        let s_num = document.getElementById("num2").value;
+        let div = f_num / s_num;
+        alert(div);
+    }
+</script>

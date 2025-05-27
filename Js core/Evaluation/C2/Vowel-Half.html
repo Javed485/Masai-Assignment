@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given a string, stored in a variable with the namestr. The size of the string is stored in a variable N. The string contains only small case English alphabets. You have to print True, if more than half the characters in the strings are vowels, else print False.
+    For example, consider the value stored in N = 6, and str = "aabefe". The number of vowels in the string are 4, which is more than half of the length of the string, which is N/2 = 3. Therefore, the required output is True    
+    Note : The value stored in N, will always be even.
+    </h1>
+    <script>
+        let n = 6;
+        let str = 'aabefe';
+        count = 0;
+        for(let i=0; i<n; i++){
+            if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+                count++;
+            }
+        }
+        if(str.length/2 < count){
+            console.log("True");
+        }else{
+            console.log("False");
+        }
+    </script>
+</body>
+</html>

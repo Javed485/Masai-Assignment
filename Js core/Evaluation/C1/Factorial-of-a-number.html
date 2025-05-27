@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given a positive number, stored in a variable with the name num<br>
+        You need to find the factorial of the number.<br>
+        In simple words, the factorial of a number is the product of all positive integers less than or equal to a<br> given positive integer.<br>
+        For example, you are given a number num = 5.<br>
+        According to the definition, the factorial ofnumwill be5*4*3*2*1 = 120, which is the required answer.<br>
+        Note: Factorial of 0 is 1.
+    </h1>
+    <script>
+        let num = 5;
+        let factorial = 1;
+        for(let i=num; i>0; i--){
+            factorial = factorial * i;
+        }
+        console.log(factorial);
+    </script>
+</body>
+</html>

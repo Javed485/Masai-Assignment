@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>Web20-C4</title>
+    <link rel="stylesheet" href="./Styles/index.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Masai Task List</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./dashboard.html">
+          <h2>Dashboard</h2>
+        </a>
+        <a href="./Progress.html">
+          <h2>In-Progress</h2>
+        </a>
+        <a href="./Done.html">
+          <h2>Done</h2>
+        </a>
+      </div>
+    </div>
+    <div id="priroty">
+      <select id="filter" onchange="filterPriroty()">
+        <option value="">Select Priority</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+    <h1>Total Task:- <span id="task-count">0</span></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Priority</th>
+          <th>Add To Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Update the rows here using jsvascript -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let dashboardArr = JSON.parse(localStorage.getItem("task-list")) || [];
+    //console.log(dashboardArr);
+
+    let addProgressArr = JSON.parse(localStorage.getItem("priority-list")) || [];
+
+    // TOTAL TASK COUNT
+    document.querySelector("#task-count").innerText = dashboardArr.length;
+
+    displayTable(dashboardArr);
+    function displayTable(res){
+      document.querySelector("tbody").innerHTML = "";
+        res.forEach(function(el,i){
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.innerText = el.t_name;
+
+        let td2 = document.createElement("td");
+        td2.innerText = el.t_desc;
+
+        let td3 = document.createElement("td");
+        td3.innerText = el.t_start;
+
+        let td4 = document.createElement("td");
+        td4.innerText = el.t_end;
+
+        let td5 = document.createElement("td");
+        td5.innerText = el.t_priority;
+
+        let td6 = document.createElement("td");
+        td6.innerText = "Add"; 
+        td6.style.textAlign = "center";
+        td6.style.cursor = "pointer";
+        td6.addEventListener("click", function(){
+          addProgress(el,i);
+        });
+
+        tr.append(td1, td2, td3, td4, td5, td6);
+        document.querySelector("tbody").append(tr);
+        });
+    }
+
+    // ADD PROGRESS DATA
+    function addProgress(el,i){
+      // console.log(el);
+      addProgressArr.push(el);
+      localStorage.setItem("priority-list",JSON.stringify(addProgressArr));
+      
+      dashboardArr.splice(i,1);
+      localStorage.setItem("task-list",JSON.stringify(dashboardArr));
+      displayTable(dashboardArr);
+    }
+
+    // FILTER BY PRIROTY
+    function filterPriroty(){
+      let selected = document.querySelector("#filter").value;
+      let sel = dashboardArr.filter(function(el){
+        let x = el.t_priority == selected;
+        return x;
+      })
+      displayTable(sel);
+    }
+  </script>
+</html>

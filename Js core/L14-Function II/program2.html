@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>// Write a custom function that has the same behavior of inbuilt Array Last Index Of Function.</h2>
+    <script>
+        let arr = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+        function lastindex(char) {
+          for (let i = arr.length - 1; i >= 0; i--) {
+            if(char == arr[i]){
+              return i;
+              break;
+            }else {
+              return -1;
+            }
+          }
+        }
+        
+        let res = lastindex('Dodo');
+        console.log(res);
+    </script>    
+</body>
+</html>

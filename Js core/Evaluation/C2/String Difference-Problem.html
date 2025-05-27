@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given two strings S1 and S2. You have to find the difference when S2 is subtracted from S1 (S1-S2)<br>
+        (Sx-Sy) results in character which are extra in Sx (in the same order it is present in Sx and not in Sy)
+    </h1>
+    <script>
+        let s1 = 'ABCX';
+        let s2 = 'ABCD';
+        let str = '';
+        for(let i=0; i<s1.length; i++){
+            for(let j=0; j<s2.length; j++){
+                if(s1[i]==s2[j]){
+                    str = str + s2[j];
+                }
+            }
+        }
+        console.log(str);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1-10
+        2-11
+        3-12
+        4-13
+        5-14
+    </h2>
+    <script>
+        let n = 5;
+        let k = 10;
+        let obj = {};
+        for(let i=0; i<=n; i++){
+            if(obj[i]==undefined){
+                obj[i] = k + i + "<br>";
+            }
+        }
+        for(let key in obj){
+            document.write(key + "-" + obj[key]);
+        }
+    </script>
+</body>
+</html>

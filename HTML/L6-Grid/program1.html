@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+            background-color: #02a7bd;
+        }
+        .keyboard{
+            width: 80%;
+            height: 250px;
+            border-radius: 20px;
+            background-color: #242a2a;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 15px;
+            padding: 25px;
+        }
+        .keyboard > p{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: #02a7bd;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: #2f3639;
+            box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+        }
+        #enter{
+            grid-area: 3/11/4/ span 2;
+        }
+        #shift{
+            grid-area: 4/11/5/ span 2;
+        }
+        #space{
+            grid-area: 5/5/6/ span 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="keyboard">
+        <p>~</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>0</p>
+        <p>Delete</p>
+        <p>Tabs</p>
+        <p>Q</p>
+        <p>W</p>
+        <p>E</p>
+        <p>R</p>
+        <p>T</p>
+        <p>Y</p>
+        <p>U</p>
+        <p>I</p>
+        <p>O</p>
+        <p>P</p>
+        <p>\</p>
+        <p>Caps</p>
+        <p>A</p>
+        <p>S</p>
+        <p>D</p>
+        <p>F</p>
+        <p>G</p>
+        <p>H</p>
+        <p>J</p>
+        <p>K</p>
+        <p>L</p>
+        <p id="enter">Enter</p>
+        <p>Shift</p>
+        <p>Z</p>
+        <p>X</p>
+        <p>C</p>
+        <p>V</p>
+        <p>B</p>
+        <p>N</p>
+        <p>M</p>
+        <p><i class="fa-solid fa-less-than"></i></p>
+        <p><i class="fa-solid fa-greater-than"></i></p>
+        <p id="shift">Shift</p>
+        <p><i class="fa-solid fa-globe"></i></p>
+        <p>Ctrl</p>
+        <p>Option</p>
+        <p>Alt</p>
+        <p id="space">Spce</p>
+        <p>Alt</p>
+        <p>Option</p>
+        <p><i class="fa-solid fa-arrow-left"></i></p>
+        <p><i class="fa-solid fa-arrow-right"></i></p>
+    </div>
+</body>
+</html>

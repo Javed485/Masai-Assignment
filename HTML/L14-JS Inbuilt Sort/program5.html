@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sort this array by its firstname(ascending & descending)<br>
+        Sort this array by age (ascending & descending)
+    </h2>
+    <script>
+        let employees = [
+                    {
+                        firstName: 'john',
+                        lastName: 'doe',
+                        age: 27,
+                        joinedDate: 'December 15, 2017'
+                    },
+
+                    {
+                        firstName: 'ana',
+                        lastName: 'rosy',
+                        age: 25,
+                        joinedDate: 'January 15, 2019'
+                    },
+
+                    {
+                        firstName: 'zion',
+                        lastName: 'albert',
+                        age: 30,
+                        joinedDate: 'February 15, 2011'
+                    }
+                ];
+        // Sortng by Age        
+        let ageAsc = employees.sort(function(a,b){
+            return a.age - b.age;
+        })
+        //console.log(ageAsc);
+
+        let ageDsc = employees.sort(function(a,b){
+            return b.age - a.age;
+        })
+        // console.log(ageDsc);
+        // Sorting by Name
+        let nameAsc = employees.sort(function(a,b){
+            if(a.firstName > b.firstName) return 1;
+            if(a.firstName < b.firstName) return -1;
+            return 0;
+        })
+        //console.log(nameAsc);
+        let nameDsc = employees.sort(function(a,b){
+            if(a.firstName > b.firstName) return -1;
+            if(a.firstName < b.firstName) return 1;
+            return 0;
+        })
+        console.log(nameDsc);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>You are given the sides of the rectangle 1: L1 and B1 and sides of the rectangle 2 : L2 and B2.<br>
+        You need print if area of rectangle 1 is greater than rectangle 2.<br>
+        You need print if perimeter of rectangle 1 is greater than rectangle 2.</h2>
+    <script>
+        let l1 = 1;
+        let b1 = 2;
+        let l2 = 3;
+        let b2 = 4;
+        let area1 = l1 * b1;
+        let area2 = l2 * b2;
+        let p1 = (l1 + b1) * 2;
+        let p2 = (l2 + b2) * 2;
+
+        if(area1 > area2){
+            console.log("true");
+        }else{
+            console.log("false");
+        }
+        if(p1 > p2){
+            console.log("true");
+        }else{
+            console.log("false");
+        }
+    </script>    
+</body>
+</html>

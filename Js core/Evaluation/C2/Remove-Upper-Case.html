@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given a string, stored in a variable with the namestr, while the variableNstores the size of the  string You have to remove all the characters in the string which are uppercase English Alphabets, and print the resultant string.
+    For example, consider the value stored instr = "MasAi", and N = 5   
+    The characters M and A are uppercase, and hence we remove them. Therefore, the required output becomes "asi".
+    </h1>
+    <script>
+        let n = 5;
+        let str = "MasAi";
+        let lower = 'qwertyuioplkjhgfdsazxcvbnm';
+        let bag = "";
+        for(let i=0; i<n; i++){
+            for(let j=0; j<26; j++){
+                if(str[i] == lower[j]){
+                    bag += str[i];
+                }
+            }
+        }
+        console.log(bag);
+    </script>
+</body>
+</html>

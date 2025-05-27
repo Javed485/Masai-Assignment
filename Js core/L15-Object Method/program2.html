@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Create a rectangle object with length and width properties<br>
+        Create two methods area and perimeter, that will return the area and perimeter of the rectangle.
+    </h2>
+    <script>
+        let obj={
+                l:10,
+                b:20,
+                area:function(){
+                    return this.l*this.b;
+                },
+                peri:function(){
+                    return 2*(this.l+this.b);
+                }
+            };
+        let area=obj['area']();
+        let peri=obj['peri']();
+        console.log('area of rectangle is',area)
+        console.log('perimeter of rectangle is',peri);
+    </script>
+</body>
+</html>

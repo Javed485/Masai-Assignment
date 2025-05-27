@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Given an array of numbers extract the numbers which are odd
+        Sample Input - [1,2,3] Sample Output - [1,3]
+    </h2>
+    <script>
+        // let arr = [1,2,3];
+        // let res = arr.filter(function(el){
+        //     return (el % 2 != 0);
+        // })
+        // console.log(res);
+        
+        let arr = [1,2,3];
+        let odd = function(el){
+            return (el % 2 != 0);
+        }
+        let res = arr.filter(odd);
+        console.log(res);
+    </script>
+</body>
+</html>

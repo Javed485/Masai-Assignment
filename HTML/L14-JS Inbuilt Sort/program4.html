@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sort this array in ascending and descending order using compare function</h2>
+    <script>
+        let animals = ['cat', 'dog', 'elephant', 'bee', 'ant'];
+        let asc = animals.sort(function(a,b){
+            if(a > b) return 1;
+            if(a < b) return -1;
+            return 0;
+        });
+        console.log(asc);
+
+        let dsc = animals.sort(function(a,b){
+            if(a > b) return -1;
+            if(a < b) return 1;
+            return 0;
+        });
+        console.log(dsc);
+    </script>
+</body>
+</html>

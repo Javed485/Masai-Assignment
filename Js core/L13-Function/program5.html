@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Write a function to replace spaces in a given string with - .</h2>
+    <script>
+        function replace(str){
+            let bag='';
+            for(let i=0; i<=str.length-1; i++){
+                if(str[i]==' '){
+                    bag=bag+'-';
+                } else {
+                    bag=bag+str[i];
+                }
+            }
+            console.log(bag);
+        }
+        replace("A Transformation in Education");
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Given an object of student grades and their marks in the mentioned below format, print the highest scored student for each grade along with the total.
+        V-Prateek-90
+        VI-Albert-90
+        VII-Sandhya-90
+    </h2>
+    <script>
+        let arr =[
+                    {
+                        grade: "V",
+                        students: [
+                            {name: "Nrupul", marks: [10, 20, 30]},
+                            {name: "Prateek", marks: [20, 30, 40]}
+                        ]
+                    },
+                    {
+                        grade: "VI",
+                        students: [
+                            {name: "Aman", marks: [10, 20, 30]},
+                            {name: "Albert", marks: [20, 30, 40]}
+                        ]
+                    },
+                    {
+                        grade: "VII",
+                        students: [
+                            {name: "Yogesh", marks: [10, 20, 30]},
+                            {name: "Sandhya", marks: [20, 30, 40]}
+                        ]
+                    }
+                ];
+                // for(let i = 0; i<=arr.length-1; i++){
+                //     console.log(arr[j]['students'][0]['marks']);
+                // } 
+
+                     
+                for (let i = 0; i <= arr.length-1; i++) {
+                    let grade = arr[i].grade;
+                    let students = arr[i].students;
+                    let topStudent = "";
+                    let highestTotal = 0;
+
+                    for (let j = 0; j <= students.length-1; j++) {
+                        let student = students[j];
+                        let total = 0;
+                        for (let k = 0; k <= student.marks.length-1; k++) {
+                            total += student.marks[k];
+                        }
+                        // console.log(total);
+                        if (total > highestTotal) {
+                            highestTotal = total;
+                            topStudent = student.name;
+                        }
+                    }
+                    console.log(grade + "-" + topStudent + "-" + highestTotal);
+                }
+    </script>
+</body>
+</html>

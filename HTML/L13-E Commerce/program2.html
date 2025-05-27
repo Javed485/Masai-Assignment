@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+        }
+        #container > div{
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+        }
+        #container > div >img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    let product = [
+                {
+                    id: 1,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                },
+                {
+                    id: 2,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                },
+                {
+                    id: 3,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                },
+                {
+                    id: 4,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                },
+                {
+                    id: 5,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                },
+                {
+                    id: 6,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                },
+                {
+                    id: 7,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                },
+                {
+                    id: 8,
+                    imgSrc: "../images/Body Oil.jpg",
+                    title: "Body Oil",
+                    price: "999",
+                    button: "Add to Cart"
+                }
+            ];
+    product.forEach(function(el){
+        // Create Div
+        let productCard = document.createElement("div");
+        // Create Image
+        let productImg = document.createElement("img");
+        productImg.src = el.imgSrc;
+        // Create H3
+        let productTitle = document.createElement("h3");
+        productTitle.innerText = el.title;
+        // Create P
+        let productPrice = document.createElement("p");
+        productPrice.innerText = el.price;
+        // Create Button
+        let btn = document.createElement("button");
+        btn.innerText = el.button;
+
+        productCard.append(productImg, productTitle, productPrice, btn);
+        document.querySelector("#container").append(productCard);
+    })        
+</script>

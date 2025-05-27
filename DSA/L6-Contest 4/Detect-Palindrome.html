@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given an integer num.<br>
+        You need to print Yes if that integer is a palindrome or else print No.<br>
+        A palindrome is a word, number, phrase, or other sequence of characters that reads the same backward as forward,such as madam or race car.
+    </h1>
+    <script>
+        let n = 1221;
+        rev = 0;
+        while(n>0){
+            let rem = n % 10;
+            n = Math.floor(n/10);
+            rev = (rev*10) + rem;
+        }
+        console.log(rev);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Given two integers N, X. Find the value of the series: 1 + x + x*x  + x*x*x + x*x*x*x +-------N the term<br>
+        Where N is the no. of term,<br>
+        X contains the value of x.<br>
+        Note : If N <= 0 or X <= 0 print -1
+    </h1>
+    <script>
+        let n = 3;
+        let x = 2;
+        let sum = 0;
+        for(let i=1; i<=n; i++){
+            sum = sum + Math.pow(i,x);
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

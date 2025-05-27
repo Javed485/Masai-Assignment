@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given a string, stored in a variable with the name str. The size of the string is stored in a variable with the name N. You have to make two strings out of the given string, such that the first string contains all the vowels present in str, in the same order as in str. The second string contains all the consonants present in str, again in the same order as in the original string str. For example, consider the value stored in N = 6, str = "nrupul", then all the vowels in the string areu, u, and the consonants aren,r,p,l. Therefore, the required output becomes
+        uu
+        nrpl
+    Please note the order of consonants and the vowels in the two strings is same as in the original string. The string with the vowels should be printed first, and the string with the consonants should be printed on the next line.
+    Note : The string contains only lower case English Alphabets
+</h1>
+<script>
+    let n = 6;
+    let str = "nrupul";
+    let vowel = '';
+    let consonants = '';
+    for(let i=0; i<str.length; i++){
+        if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+            vowel += str[i];
+        }else{
+            consonants += str[i];
+        }
+    }
+    console.log(vowel);
+    console.log(consonants);
+</script>
+</body>
+</html>

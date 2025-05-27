@@ -1,0 +1,17 @@
+#container{
+    width: 80%;
+    margin: auto;
+}
+button{
+    font-size: 18px;
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    border-color: blue;
+}
+#products_data{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}

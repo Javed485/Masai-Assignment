@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are provided an integer N.<br>
+        For all numbers in the range[1,N], includingNyou have to print a string as per the following rules:<br>
+        PrintMasai School, if the number is a multiple of both 5 and 7.<br>
+        PrintMasai. if the number is a multiple of 7 only.<br>
+        PrintSchool, if the number is a multiple of 5 only.<br>
+        Else in all other cases print Hurray!
+    </h1>
+    <script>
+        let n = 7;
+        for(i=1; i<=n; i++){
+            if(i%5 == 0 && i%7 == 0){
+                console.log("Masai School");
+            }else if(i%7 == 0){
+                console.log("Masai");
+            }else if(i%5 == 0){
+                console.log("School");
+            }else{
+                console.log("Hurray");
+            }
+        }
+    </script>
+</body>
+</html>

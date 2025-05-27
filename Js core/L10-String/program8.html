@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Print true, if the value stored instrcontains at least one vowel, otherwise print false.</h2>
+    <script>
+        let n = 4;
+        let str = "stva";
+        let flag = "false";
+        for(let i=0; i<=str.length-1; i++){
+            if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+                flag = true;
+            }
+        }
+        document.write(flag);
+    </script>
+</body>
+</html>

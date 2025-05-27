@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button onclick="storeData()">Store Name to LS</button>
+    <button onclick="getName()">Get Name from LS</button>
+    <button id="mbl" onclick="storeNum()">Store Mobile Num to LS</button>
+    <button onclick="getNum()">Get Mobile Num from LS</button>
+    <button onclick="storeHobbis()">Store Hobbies to LS</button>
+    <button onclick="getHobbis()">Get Hobbies from LS</button>
+    <button onclick="storeStd()">Store Students Data to LS</button>
+    <button onclick="getStd()">Get Students data from LS</button>
+    <script>
+        // STORE NAME IN LOCALSTORAGE
+        function storeData(){
+            let btn = document.querySelector("button").innerText = "Masai School";
+            localStorage.setItem("username", btn);
+
+            let name = localStorage.getItem("username");
+            if(name){
+                console.log("Value is stored.");
+            }else{
+                console.log("Value is not stored.");
+            }
+        }
+
+        // GET DATA IN H1
+        function getName(){
+            let name = localStorage.getItem("username");
+            document.querySelector("h1").innerText = name;
+        }
+
+        //  STORE NUMBER IN LOCALSTORAGE
+        function storeNum(){
+            let btn = document.querySelector("#mbl").innerText = "999999999";
+            localStorage.setItem("mobile", btn);
+
+            let name = localStorage.getItem("mobile");
+            if(name){
+                console.log("Value is stored.");
+            }else{
+                console.log("Value is not stored.");
+            }
+        }
+
+        // GET MOBILE IN H1
+        function getNum(){
+            let name = localStorage.getItem("mobile");
+            document.querySelector("h1").innerText = name;
+        }
+
+        // STORE HOBBIES
+        function storeHobbis(){
+            let hobbies =["cricket","music"];
+            localStorage.setItem("my_hobbies",JSON.stringify(hobbies));
+
+            let name =  JSON.parse(localStorage.getItem("my_hobbies")) || [];
+            if(name){
+                console.log("Value is stored.");
+            }else{
+                console.log("Value is not stored.");
+            }
+        }
+
+        // GET DATA BY LOOP
+        function getHobbis(){
+            let name =  JSON.parse(localStorage.getItem("my_hobbies"));
+            name.forEach(function(el){
+                return el;
+            }) 
+            console.log(name);
+        }
+
+        // STORE ARRAY OF OBJECTS
+        function storeStd(){
+            let stdArr =[
+                        {"name":"Nrupul",place:"Banglore"},
+                        {"name":"Prateek",place:"Mumbai"}
+                    ];
+            localStorage.setItem("students", JSON.stringify(stdArr));
+        }
+
+        // Get ARRAY OF OBJECTS 
+        function getStd(){
+            let std =  JSON.parse(localStorage.getItem("students"));
+            let res = std.map(function(el){
+                return el.name;
+            })
+            console.log(res);
+        }
+    </script>
+</body>
+</html>

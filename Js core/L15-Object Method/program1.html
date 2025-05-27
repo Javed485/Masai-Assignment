@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Create an object with the following functionality<br>
+        Ability to add 3 students details and their marks in 3 subjects<br>
+        Method to find the student with the least total.<br>
+        Method to find the student with the highest total.
+    </h2>
+    <script>
+        let student = {
+            arr : [],
+            mark : function(name,eng,math,sci){
+                let obj = {};
+                obj['name']=name;
+                obj['eng']=eng;
+                obj['math']=math;
+                obj['sci']=sci;
+                this.arr.push(obj);
+            },
+            least : function(){
+                let min = Infinity;
+                let name;
+                for(let i=0; i<this.arr.length; i++){
+                    let total = this.arr[i]['eng']+this.arr[i]['math']+this.arr[i]['sci'];
+                    if(total < min){
+                        min=total;
+                        name=this.arr[i]['name'];
+                    }
+                }
+                console.log(name);
+            },
+            highest : function(){
+            let max = -Infinity;
+            let name;
+                for(let i=0; i<this.arr.length; i++){
+                let total=this.arr[i]['eng']+this.arr[i]['math']+this.arr[i]['sci'];
+                    if(total > max){
+                    max=total;
+                    name=this.arr[i]['name'];
+                    }
+                }
+                console.log(name);
+            }
+        };
+        student['mark']('javed',52,78,65);
+        student['mark']('arhaan',42,71,56);
+        student['mark']('Saif',82,46,42);
+
+        // console.log(student['arr']);
+
+        student['least']();
+        student['highest']();
+    </script>
+</body>
+</html>

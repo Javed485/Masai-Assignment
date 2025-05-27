@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>// Write a custom function that has the same behavior of inbuilt Array Slice Function.</h2>
+    <script>
+        let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+        function slice(a){
+          let arr=[];
+          for(i=a;i<=animals.length-1;i++){
+            arr.push(animals[i]);
+          }
+           console.log(arr);
+        };
+        slice(2);
+    </script>    
+</body>
+</html>

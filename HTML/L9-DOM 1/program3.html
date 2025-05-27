@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- On clicking on button, display the quote given in p tag in console -->
+    <button onclick="clickfcn()">Show Quote in console</button>
+    <p id="quote">Talk is cheap Show me the code</p>
+</body>
+</html>
+<script>
+    function clickfcn(){
+        let message = document.getElementById("quote").innerText;
+        console.log(message);
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given an array, whose size is stored in a variable with the name N
+        The array is stored in a variable with the name arr
+        You have to find the product of all the elements of the array, which are stored at even indexes
+        For example, consider the value stored in N = 4, and the value stored in arr = [1,2,3,4]. 
+        Then, the elements stored at even indexes are1,3, therefore, the product becomes1*3 = 3, which is the required answer.
+        Note : Indexing in the array starts from 0
+    </h1>
+    <script>
+        let n = 4;
+        let arr = [1,2,3,4];
+        let product = 1;
+        for(let i=0; i<arr.length; i++){
+            if(i%2==0){
+                product = product * arr[i];
+            }
+        }
+        console.log(product);
+    </script>
+</body>
+</html>

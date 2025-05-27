@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given two arrays, both of given size N.
+        The first array represents the price of commodities present in your cart, represented by the variable name price. The second array represents the quantity of each commodity that you need, represented by the variable namequantity. You have to find the total price of the commodities present in the cart.
+        For example, consider the value stored inN = 3, and the first array is price = [100,20,40], and the second array is quantity = [2,1,2]
+        Then, the required cart total will be
+        Cart Total = (100 * 2 + 20 * 1 + 40 * 2) = (200 + 20 + 80) = 300
+        Therefore, the required output will be 300
+    </h1>
+    <script>
+        let n = 3;
+        let price = [100,20,40];
+        let quantity = [2,1,2];
+        let sum = 0;
+        for(let i=0; i<n; i++){
+            for(let j=0; j<n; j++){
+                if(i==j){
+                    sum += price[i]*quantity[j];
+                }
+            }
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

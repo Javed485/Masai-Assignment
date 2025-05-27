@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given an array of N integers. You need to print Yes if 42 is present in array, else print No.</h1>
+    <script>
+        let n = [3,7,0,9,8];
+        let count = 0;
+        for(let i=0; i<=n.length-1; i++){
+            if(n[i] == 42){
+                count ++;
+            }
+        }
+        if(count > 0){
+            console.log("Yes");
+        }else{
+            console.log("No");
+        }
+    </script>
+</body>
+</html>

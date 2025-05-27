@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            background-color: #cad9f5;
+        }
+        .container > h1{
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .card{
+            width: 80%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .card > div{
+            width: 25%;
+            height: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+        }
+        .card > div > img{
+            width: 100%;
+        }
+        .card > div > p:nth-child(2){
+            font-family: sans-serif;
+            color: blue;
+        }
+        .card > div > h4{
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 17px;
+        }
+        .card div > p:nth-child(4){
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            color: grey;
+        }
+        .container #btn{
+            text-align: center;
+        }
+        .container > #btn > button{
+            color: rgb(219, 64, 90);;
+            border: 1px solid rgb(219, 64, 90);;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 17px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .second-container{
+            width: 100%;
+            height: auto;
+        }
+        .second-container > h1{
+            padding: 20px 0px;
+            font-weight: bold;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .second-container > #cards{
+            width: 80%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 40px;
+        } 
+        .second-container > #cards > div{
+            width: 30%;
+            height: auto;
+        }
+        .second-container img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Masai In The News</h1>
+        <div class="card">
+            <div>
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png" />
+                <p>21 Dec 2021</p>
+                <h4>Edtech startup Masai school acquires data analytics firm preplesf for $1 Million</h4>
+                <p>With there latest equilsition, Masai moved one step closer to becoming...</p>
+            </div>
+            <div>
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/money_Control_c3e25f5ceb.png" />
+                <p>21 Dec 2021</p>
+                <h4>Edtech startup Masai school acquires data analytics firm preplesf for $1 Million</h4>
+                <p>With there latest equilsition, Masai moved one step closer to becoming...</p>
+            </div>
+            <div>
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/vccircle_6ef779c958.png" />
+                <p>21 Dec 2021</p>
+                <h4>Edtech startup Masai school acquires data analytics firm preplesf for $1 Million</h4>
+                <p>With there latest equilsition, Masai moved one step closer to becoming...</p>
+            </div>
+        </div>
+        <div id="btn">
+            <button>See More ></button>
+        </div>
+    </div>
+
+    <div class="second-container">
+        <h1>Our Investors, Who Believe In Us</h1>
+        <div id="cards">
+            <div><img src="https://www.masaischool.com/img/our-investors/unitus.svg" /></div>
+            <div><img src="https://www.masaischool.com/img/our-investors/omidyar.svg" /></div>
+            <div><img src="https://www.masaischool.com/img/our-investors/indiaQuotient.svg" /></div>
+        </div>
+    </div>
+</body>
+</html>

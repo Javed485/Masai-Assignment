@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are provided a string S.<br>
+        Write a program that returns length of the longest palindromic substring of that string.
+    </h1>
+    <script>
+        let s = "thisracecarisgood";
+        let arr=[];
+        for(let i=0; i<s.length; i++){
+            let substr='';
+            for(let j=i; j<s.length; j++){
+                substr = substr + s[j];
+                let palin_sub='';
+                for(let k=substr.length-1; k>=0; k--){
+                    palin_sub = palin_sub + substr[k];
+                    if(substr == palin_sub){
+                        arr.push(palin_sub.length);
+                    }
+                }
+            }
+        }
+        let num = -Infinity;
+        for(let n=0; n<arr.length; n++){
+            if(arr[n]>num){
+                num = arr[n];
+            }
+        }
+        console.log(num);
+    </script>
+</body>
+</html>

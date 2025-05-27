@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given a number stored in a variable with the name N<br>
+        Print the output according to the following conditions<br>
+        1. If N is divisible by both 4 and 6, print "Awesome!", without quotes<br>
+        2. Else If N is divisible by 4, print "Four!", without quotes<br>
+        3. Else if N is divisible by 6, print "Six!", without quotes<br>
+        4. Else print "Dark!", without quotes
+    </h1>
+    <script>
+        let n = 12;
+        if(n%4==0 && n%6==0){
+            console.log("Awesome");
+        }else if(n%4==0){
+            console.log("Four");
+        }else if(n%6==0){
+            console.log("six");
+        }else{
+            console.log("Dark");
+        }
+    </script>
+</body>
+</html>

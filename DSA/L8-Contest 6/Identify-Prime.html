@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given a number stored in a variable with the name num<br>
+        Check if the number is a prime number or not<br>
+        If the value stored in num, is a prime number print Yes, else print No.
+    </h1>
+    <script>
+        let num = 13;
+        let count = 0;
+        for(let i=1; i<=num; i++){
+            if(num % i == 0){
+                count++;
+            }
+        }
+        if(count<3){
+            console.log("Yes");
+        }else{
+            console.log("No");
+        }
+    </script>
+</body>
+</html>

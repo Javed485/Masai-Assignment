@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Write a function to check if the char is a small case or not.</h2>
+    <script>
+        function check_char(char){
+            let lower ='abcdefghijklmnopqrstuvwxyz';    
+            let upper ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            for(let i=0; i<=lower.length-1; i++){
+                if(lower[i]==char){
+                    return true; 
+                }else if(upper[i]==char){
+                    return false;
+                }
+            }
+        }
+        let res = check_char('j');
+        if(res){
+            console.log("lower case");
+        }else{
+            console.log("upper case");
+        }
+    </script>
+</body>
+</html>

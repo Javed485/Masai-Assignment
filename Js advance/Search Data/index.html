@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movie{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 3%;
+            justify-content: center;
+        }
+        #loader_div{
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input id="movie_name" type="text" placeholder="Search">
+        <button onclick="searchMovie()">Search</button>
+        <!-- 8c0eff87 -->
+    </div>
+    <div id="loader_div">
+        <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e477bxndszvt46470p0n3m925xj17qofg43b0sl635m&rid=giphy.gif&ct=g" alt="">
+    </div>
+    <div id="movie"></div>
+</body>
+</html>
+<!-- <script>
+    function searchMovie(){
+    let movie = document.getElementById('movie_name').value;
+    let response = fetch(`http://www.omdbapi.com/?apikey=f3d5c71f&s=${movie}`);
+    // console.log('response:',response);
+
+    response
+    .then(function(success) {
+        let data = success.json();
+        data
+        .then(function(success){
+            console.log('success',success);
+        })
+        .catch(function(error){
+            console.log('error',error);
+        });
+    })
+    .catch(function(error) {
+        console.log('error',error);
+    });
+}
+</script> -->
+<script src="search.js"></script>

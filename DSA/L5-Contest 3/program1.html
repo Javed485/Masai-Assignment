@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Given an array, which has N integers.<br>
+        You need to print the smallest and largest element present in the array each on new lines.
+    </h1>
+    <script>
+        let arr = [-2,0,8,4];
+        let min = Infinity;
+        let max = -Infinity;
+        for(let i=0; i<=arr.length-1; i++){
+            if(arr[i] < min ){
+                min = arr[i];
+            }else if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        console.log(min);
+        console.log(max);
+    </script>
+</body>
+</html>

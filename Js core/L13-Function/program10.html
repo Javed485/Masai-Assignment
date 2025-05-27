@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>// Write a function to convert a character to lower case<br>
+        // Use this function to convert a given word to lower case<br>
+        // Use that function to convert an array of strings to array of lower case strings<br>
+        // Sample Input ["MA", "SA", "I", "SCH", "OOL"]<br>
+        // Sample Output ["ma", "sa", "i", "sch", "ool"]<br>
+    </h2>
+    <script>
+        function convert(char){
+            let lower='abcdefghijklmnopqrstuvwxyz';
+            let upper='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let bag = "";
+            for(let i=0; i<=lower.length-1; i++){
+                for(let j=0; j<26; j++){
+                    if(char[i]==upper[j]){
+                        bag = bag + lower[i];
+                    }else if(char[i]==lower[j]){
+                        bag = bag + upper[j];
+                    }
+                }
+            }
+            console.log(bag);
+        }
+        convert('try');
+
+        // let arr = ["MA", "SA", "I", "SCH", "OOL"];
+        // let newArray = [];
+        // for(let i=0;i<arr.length;i++) {
+        //   check(arr[i])
+        // }
+        // console.log(newArray);
+        // function check(str){
+        //   let lower = 'abcdefghijklmnopqrstuvwxyz';
+        //   let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        //   let bag = "";
+        //   for(let i=0;i<str.length;i++){
+        //     for(let j=0;j<26;j++) {
+        //       if(str[i] == upper[j]) {
+        //         bag += lower[j];
+        //       }
+        //     }
+        //   }
+        //   newArray.push(bag);
+        // }
+    </script>
+</body>
+</html>

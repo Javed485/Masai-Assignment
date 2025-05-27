@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script defer src="script/index.js"></script>
+    <script defer src="script/latest-&-trending.js"></script>
+    <script defer src="script/bollywood.js"></script>
+    <script defer src="script/hollywood.js"></script>
+    <script defer src="script/channels.js"></script>
+    <script defer src="script/kids.js"></script>
+    <script defer src="script/science.js"></script>
+    <script defer src="script/superheroes.js"></script>
+    <script defer src="script/languages.js"></script>
+</head>
+<body>
+    <div id="preloader"></div>
+    <!-- Start Navbar -->
+    <div id="container">
+        <!-- Left Navbar -->
+        <div class="navbar-left">
+            <div class="menu-block">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <a href="#" class="logo"><img src="image/logo/brand-logo.png" alt=""></a>
+            </div>
+                <ul class="nav-block">
+                    <li class="nav-dropdown"><a href="#">TV</a>
+                        <div class="nav-dropdown-content">
+                            <a href="#">Mood Mix</a>
+                            <a href="#">Hotstar Specials</a>
+                            <a href="#">Quix</a>
+                            <a href="#">Star Jalsha</a>
+                            <a href="#">Star Plus</a>
+                            <a href="#">Star Vijay</a>
+                            <a href="#">Star Bharat</a>
+                            <a href="#">Asianet</a>
+                            <a href="#">More...</a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown"><a href="#">Movies</a>
+                        <div class="nav-dropdown-content">
+                            <a href="#">Odia</a>
+                            <a href="#">Hindi</a>
+                            <a href="#">Bangali</a>
+                            <a href="#">Telugu</a>
+                            <a href="#">Malayalam</a>
+                            <a href="#">Tamil</a>
+                            <a href="#">Marathi</a>
+                            <a href="#">English</a>
+                            <a href="#">Kannada</a>
+                            <a href="#">Korean</a>
+                            <a href="#">Japanese</a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown"><a href="#">Sports</a>
+                        <div class="nav-dropdown-content">
+                            <a href="#">Cricket</a>
+                            <a href="#">Football</a>
+                            <a href="#">Hockey</a>
+                            <a href="#">Kabaddi</a>
+                            <a href="#">Martial Arts</a>
+                            <a href="#">American Football</a>
+                            <a href="#">Tennis</a>
+                            <a href="#">Khelo India</a>
+                            <a href="#">Formula E</a>
+                            <a href="#">Athletics</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Disney+</a></li>
+                </ul> 
+            <!-- </div> -->
+            <div class="nav-kids">
+                <a href="#"><img src="image/logo/kid.png" alt=""></a>
+            </div>
+        </div>
+        <!-- Right Navbar -->
+        <div class="navbar-right">
+            <input type="search" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="subscribe-btn">Subscribe</button>
+            <a href="#" class="login-btn">Login</a>
+        </div>
+    </div>
+    <!-- End Navbar -->
+    
+    <!-- Start Slider -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- <div class="slider">
+                <div class="slide-content">
+                    <h1 class="movie-title">loki</h1>
+                    <p class="movie-special">Hotstar Special</p>
+                    <p class="movie-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit saepe eius ratione nostrum mollitia explicabo quae nam pariatur. Sint, odit?</p>
+                </div>
+                <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/7380/1277380-h-7699d0f87753" alt="">
+            </div> -->
+        </div>
+    </div>
+    <!-- <div class="btn-wrap">
+        <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div> -->
+    <!-- End Slider -->
+
+    <!-- Start Video Cards -->
+    <div class="video-card-container">
+        <div class="video-card">
+            <img src="image/suggestion/disney.PNG" class="video-card-image" alt="">
+            <video src="videos/disney.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="image/suggestion/pixar.PNG" class="video-card-image" alt="">
+            <video src="videos/pixar.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="image/suggestion/marvel.PNG" class="video-card-image" alt="">
+            <video src="videos/marvel.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="image/suggestion/star-wars.PNG" class="video-card-image" alt="">
+            <video src="videos/star-war.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="image/suggestion/geographic.PNG" class="video-card-image" alt="">
+            <video src="videos/geographic.mp4" mute loop class="card-video"></video>
+        </div>
+    </div>
+    <!-- End Video Cards -->
+
+    <!-- Start Latest & Trending Shows -->
+    <h1 class="heading_title">Latest & Trending</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container latest-container">
+            <!-- <div class="card">
+                <img src="image/recomm/poster 2.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- End Latest & Trending Shows -->
+    
+    <!-- Start Bollywood Movies -->
+    <h1 class="movie_title">Bollywood Movies</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container bollywood-container">
+            <!-- <div class="card">
+                <img src="image/recomm/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- End Bollywood Movies -->
+
+    <!-- Start Hollywood Movies -->
+    <h1 class="movie_title">Hollywood Movies</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container hollywood-container">
+            <!-- <div class="card">
+                <img src="image/recomm/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- End Hollywood Movies -->
+
+    <!-- Start Popular Channels -->
+    <h1 class="movie_title">Popular Channels</h1>
+    <div class="channel-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container channel-container ">
+            <!-- <div class="channel-card">
+                <img src="image/channel/channel 1.webp" class="channel-img" alt="">
+            </div> -->
+        </div>
+    </div>
+    <!-- End Start Popular Channels -->
+
+    <!-- Start Best of Kids Movies -->
+    <h1 class="movie_title kids">Best of Kids</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container kids-container">
+            <!-- <div class="card">
+                <img src="image/recomm/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- End Best of Kids Movies -->
+
+    <!-- Start Super Hero Movies -->
+    <h1 class="movie_title kids">Best of Superheroes</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container super-container">
+            <!-- <div class="card">
+                <img src="image/recomm/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- End Super Hero Movies -->
+
+    <!-- Start Science Movies -->
+    <h1 class="movie_title kids">Popular in Science</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container science-container">
+            <!-- <div class="card">
+                <img src="image/recomm/poster 11.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">movie name</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- End Science Movies -->
+
+    <!-- Start Popular Languages -->
+    <h1 class="movie_title">Popular Languages</h1>
+    <div class="channel-list">
+        <button class="pre-btn"><img src="image/logo/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/logo/nxt.png" alt=""></button>
+        <div class="card-container language-container ">
+            <!-- <div class="channel-card">
+                <img src="image/language/language 1.webp" class="channel-img" alt="">
+                <h3 class="centere-name">Hindi</h3>
+            </div> -->
+        </div>
+    </div>
+    <!-- End Start Popular Languages -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="left-footer">
+            <ul class="footer-block">
+                <li><a href="#">About Disney+ Hotstar</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Privacy & Policy</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+            <p><span>&#169</span> 2023 STAR. All Rights Reserved. HBO, Home Box Office and all related channel and programming logos are service marks of, and all related programming visuals and elements are the property of, Home Box Office, Inc. All rights reserved.</p>
+        </div>
+        <div class="middle-footer">
+            <p>Connect with us</p>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>    
+        </div>
+        <div class="right-footer">
+            <p>Disney+ Hotstar App</p>
+            <img src="image/logo/googl.png" alt="">
+            <img src="image/logo/apple.png" alt="">
+        </div>
+    </div>
+    <!-- End Footer -->
+</body>
+</html>

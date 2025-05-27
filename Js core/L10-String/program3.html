@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Given an array of string count the overall total number of characters.</h2>
+    <script>
+        let str = ['javed','arshad','sonu'];
+        let count = 0;
+        for(let i=0; i<=str.length-1; i++){
+            for(let j=0; j<=str[i].length-1; j++){
+                count++;
+            }
+        }
+        console.log(count);
+    </script>
+</body>
+</html>

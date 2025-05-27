@@ -1,0 +1,12 @@
+-- Pushing on Github--
+Step 1) Create Repo in Github     --one time process 
+Step 2) Create a Repo in your Computer   --one time process 
+Step 3) git init   -- one time Process
+Step 4) git remote add origin <URL>   --one time process 
+Step 5) ACP(add, commit, push)
+
+
+-- Branching Features--
+Step 1) git branch <branch name>
+Step 2) git checkout <name of the branch>
+Step 3) ACP

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green{
+            background-color: rgb(67, 199, 67);
+        }
+        .pink{
+            background-color: rgb(224, 149, 162);
+        }
+        .blue{
+            background-color: blue;
+        }
+        .grey{
+            background-color: grey;
+        }
+        .orange{
+            background-color: orangered;
+        }
+        .megenta{
+            background-color: rgb(202, 61, 202);
+        }
+        .parple{
+            background-color: rgb(70, 37, 107);
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .dark-green{
+            background-color: green;
+        }
+        .maroon{
+            background-color: maroon;
+        }
+        #none{
+            border: 2px solid white;
+        }
+        .container{
+            width: 100%;
+            margin: auto;
+        }
+        .container h1{
+            text-transform: uppercase;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .main-container{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            display: flex;
+        }
+        .col1{
+            width: 16%;
+        }
+        .col2{
+            width: 50%;
+        }
+        .col3{
+            width: 34%;
+        }
+        .row{
+            display: flex;
+        }
+        .l-box{
+            width: 25%;
+            height: 45px;
+            margin-top: 20px;
+            margin-left: 12px;
+            border: 2px solid #000;
+        }.m-box{
+            width: 24%;
+            height: 150px;
+            margin-top: 60px;
+            border: 2px solid #000;
+        }.r-box{
+            width: 12%;
+            height: 45px;
+            margin-top: 20px;
+            margin-left: 16px;
+            border: 2px solid #000;
+        }
+        .box{
+            width: 4%;
+            height: 45px;
+            margin: auto;
+            margin-left: 10px;
+            margin-top: 20px;
+            border: 2px solid #000;
+        }
+        h5{
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #fff;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-top: 14px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        #right-no{
+            text-align: right;
+            padding-right: 10px;
+        }
+        #middle-no{
+            font-size: 50px;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Periodic table of elements</h1>
+    </div>
+    <div class="main-container">
+        <div class="col1">
+            <div class="row">
+                <div class="l-box maroon">
+                    <h5>H</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="l-box green"></div>
+                <div class="l-box pink">
+                    <p>4</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="l-box green"></div>
+                <div class="l-box pink">
+                    <p>12</p>
+                </div>
+            </div>
+        </div>
+        <div class="col2">
+            <div class="row">
+                <div class="m-box green">
+                    <p id="right-no">14</p>
+                    <p id="middle-no">Si</p>
+                </div>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="row">
+                <div class="r-box" id="none"></div>
+                <div class="r-box" id="none"></div>
+                <div class="r-box" id="none"></div>
+                <div class="r-box" id="none"></div>
+                <div class="r-box" id="none"></div>
+                <div class="r-box yellow"></div>
+            </div>
+            <div class="row">
+                <div class="r-box megenta"></div>
+                <div class="r-box dark-green"></div>
+                <div class="r-box dark-green"></div>
+                <div class="r-box dark-green"></div>
+                <div class="r-box parple"></div>
+                <div class="r-box yellow"></div>
+            </div>
+            <div class="row">
+                <div class="r-box orange"></div>
+                <div class="r-box megenta"></div>
+                <div class="r-box dark-green"></div>
+                <div class="r-box dark-green"></div>
+                <div class="r-box parple"></div>
+                <div class="r-box yellow"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="box green"></div>
+        <div class="box pink">
+            <p>20</p>
+        </div>
+        <div class="box" id="none"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box orange"></div>
+        <div class="box megenta"></div>
+        <div class="box megenta"></div>
+        <div class="box dark-green"></div>
+        <div class="box parple"></div>
+        <div class="box yellow"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="box green"></div>
+        <div class="box pink">
+            <p>38</p>
+        </div>
+        <div class="box" id="none"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box orange"></div>
+        <div class="box orange"></div>
+        <div class="box megenta"></div>
+        <div class="box megenta"></div>
+        <div class="box parple"></div>
+        <div class="box yellow"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="box green"></div>
+        <div class="box pink">
+            <p>56</p>
+        </div>
+        <div class="box"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box orange"></div>
+        <div class="box orange"></div>
+        <div class="box orange"></div>
+        <div class="box megenta"></div>
+        <div class="box parple"></div>
+        <div class="box yellow"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="box green"></div>
+        <div class="box pink">
+            <p>88</p>
+        </div>
+        <div class="box"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box blue"></div>
+        <div class="box grey"></div>
+        <div class="box grey"></div>
+        <div class="box grey"></div>
+        <div class="box grey"></div>
+        <div class="box grey"></div>
+        <div class="box grey"></div>
+    </div>
+</body>
+</html>

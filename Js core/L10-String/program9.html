@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Vowel & Consonant Count.</h2>
+    <script>
+        let n = 6;
+        let str = "ankush";
+        let count = 0;
+        let count1 = 0;
+        for(let i=0; i<=str.length-1; i++){
+            if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+                count++;
+            }else{
+                count1++;
+            }
+        }
+        document.write(count);
+        document.write(count1);
+    </script>
+</body>
+</html>

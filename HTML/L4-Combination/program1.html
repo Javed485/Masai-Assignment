@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            width: 40%;
+            margin: auto;
+            text-align: center;
+        } 
+        .heading h1{
+            font-size: 40px;
+        }
+        .heading > p{
+            font-size: 18px;
+            color: grey;
+        }
+        .card{
+            width: 65%;
+            margin: auto;
+            height: auto;
+            margin-top: 50px;
+            display: flex;
+        }
+        .card-box{
+            width: 30%;
+            height: auto;
+            margin: auto;
+            padding-bottom: 20px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+        } 
+        .card-box h2{
+            font-weight: bold;
+        }
+        .card-box h1{
+            color: green;
+        }
+        .card-box i{
+            position: relative;
+            top: -25px;
+        }
+        .card-box h4{
+            font-size: 18px;
+            position: relative;
+            top: -25px;
+            padding: 0px 10px;
+        }
+        .card button{
+            font-size: 20px;
+            font-weight: bold;
+            color: blue;
+            padding: 12px 25px;
+            border-radius: 10px;
+            border-color: blue;
+        }
+        #amount{
+            color: orange;
+        }
+        #amount1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Choose a plan that right for your business</h1>
+        <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
+    </div>
+
+    <div class="card">
+        <div class="card-box">
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <i>Per month</i>
+            <h4>We collect reviews from our users so you can get an honest opinion of what an experience with our website</h4>
+            <button>Start Now</button>
+        </div>
+        <div class="card-box">
+            <h2>Starter Plan</h2>
+            <h1 id="amount">$39.00</h1>
+            <i>Per month</i>
+            <h4>We collect reviews from our users so you can get an honest opinion of what an experience with our website</h4>
+            <button>Start Now</button>
+        </div>
+        <div class="card-box">
+            <h2>Starter Plan</h2>
+            <h1 id="amount1">$59.00</h1>
+            <i>Per month</i>
+            <h4>We collect reviews from our users so you can get an honest opinion of what an experience with our website</h4>
+            <button>Start Now</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sort this array in ascending and descending order using compare function</h2>
+    <script>
+        // let numbers = [0, 1 , 2, 3, 1, 2, 4, 3 ];
+        // let res = numbers.sort();
+        // console.log(res);
+        let numbers = [0, 1 , 2, 30, 10, 25, 40, 30 ];
+        let asc = numbers.sort(function(a,b){
+            return a - b;
+        })
+        document.write(asc);
+        
+        let dsc = numbers.sort(function(a,b){
+            return b - a;
+        })
+        document.write(dsc);
+    </script>
+</body>
+</html>

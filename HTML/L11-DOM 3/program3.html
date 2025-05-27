@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        div {
+            display: flex;
+            justify-content: space-around;
+            }
+        form {
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 30%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 30px;
+        }
+        label {
+            font-size: 20px;
+        }
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        table tr:nth-child(even) {
+            background-color: #8caacf;
+        }
+        table tr:hover {
+            background-color: #ddd;
+        }
+        table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0468aa;
+            color: white;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #2b619e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #3973b6;
+        }
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            text-transform: uppercase;
+            font-family: monospace;
+            color: #2b619e;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dont make any changes here -->
+    <h1>Hospital - Doctor Records</h1>
+    <div>
+        <!-- ***** We are using form here  ****  -->
+        <form>
+            <label for="">Doctor Name</label><br />
+            <input id="name" type="text" placeholder="Enter Doctor Name" /><br />
+            <label for="">Doctor ID</label><br />
+            <input id="docID" type="number" placeholder="Enter Doctor ID"/><br />
+            <label for="">Specialization </label><br />
+            <select id="dept">
+                <option value="">Select Specialization</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="ENT">ENT</option>
+                <option value="Dentist">Dentist</option>
+                <option value="COVID">COVID</option>
+                <option value="Gynecologist">Gynecologist</option>
+            </select><br />
+            <label for="">Experience </label><br />
+            <input id="exp" type="number" placeholder="Experience in Years" /><br />
+            <label for="">Email Address </label><br />
+            <input type="text" id="email" placeholder="Enter Email Address" /><br />
+            <label for="">Mobile Number </label><br />
+            <input id="mbl" type="number" placeholder="Enter Mobile number" /><br />
+            <input type="submit" />
+        </form>
+        <table>
+        <!-- Dont change order of columns -->
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Doctor ID</th>
+                    <th>Specialization</th>
+                    <th>Experience in years</th>
+                    <th>Email address</th>
+                    <th>Mobile Number</th>
+                    <th>Role</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!-- ******* Append your output here ********* -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",addData);
+        function addData(e){
+            e.preventDefault();
+            let dName = document.querySelector("#name").value;
+            let dId = document.querySelector("#docID").value;
+            let dDept = document.querySelector("#dept").value;
+            let dExp = document.querySelector("#exp").value;
+            let dEmail = document.querySelector("#email").value;
+            let dmbl = document.querySelector("#mbl").value;
+            // First Row
+            let tRow = document.createElement("tr");
+
+            // First Column
+            let tCol1 = document.createElement("td");
+            tCol1.innerText = dName;
+
+            // Second Column
+            let tCol2 = document.createElement("td");
+            tCol2.innerText = dId;
+
+            // Third Column
+            let tCol3 = document.createElement("td");
+            tCol3.innerText = dDept;
+
+            // Fourth Column
+            let tCol4 = document.createElement("td");
+            tCol4.innerText = dExp;
+
+            // Fivth Column
+            let tCol5 = document.createElement("td");
+            tCol5.innerText = dEmail;
+
+            // Sixth Column
+            let tCol6 = document.createElement("td");
+            tCol6.innerText = dmbl;
+
+            // Seven Column
+            let tCol7 = document.createElement("td");
+            if(dExp > 5){
+                tCol7.innerText = "Senior";
+            }
+            else if(dExp >= 2 && dExp <= 5){
+                tCol7.innerText = "Junior";
+            }
+            else if(dExp <= 1){
+                tCol7.innerText = "Trainee";
+            }
+
+            // Eight Column
+            let tCol8 = document.createElement("td");
+            tCol8.innerText = "Delete";
+            tCol8.style.backgroundColor = "red";
+            tCol8.addEventListener("click",deleteRow);
+
+            tRow.append(tCol1,tCol2,tCol3,tCol4,tCol5,tCol6,tCol7,tCol8);
+            document.querySelector("tbody").append(tRow);
+        }
+
+        // Delete Row
+        function deleteRow(event){
+            event.target.parentNode.remove();
+        }
+</script>

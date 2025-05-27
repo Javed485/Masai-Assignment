@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are given an array of N integers.<br>
+        You need to print Odd, if the sum of all odd numbers present in the array is greater than sum of all the even numbers present in the array, or else print Even.
+    </h1>
+    <script>
+        let arr = [1,2,3,4];
+        let even = 0;
+        let odd = 0;
+        for(let i=0; i<=arr.length-1; i++){
+            if(arr[i]%2 == 0){
+                even = even + arr[i];
+            }else if(arr[i]%2 != 0){
+                odd = odd + arr[i];
+            }
+        }
+        if(even > odd){
+            console.log("Even");
+        }else{
+            console.log("Odd");
+        }
+    </script>
+</body>
+</html>
