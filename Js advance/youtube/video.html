@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Youtube</title>
+</head>
+<style>
+	.container{
+		display: flex;
+		height: 700px;
+	}
+	.container .video-detail{
+		flex: 7;
+	}
+	.container .recommendations{
+		flex: 3;
+	}
+	div{
+		border: 1px solid #000;
+		padding: 5px;
+	}
+</style>
+<body onload="showClickedVideo()">
+	<h1>Youtube</h1>
+	<div class="navbar">
+		<input id="input" type="text" placeholder="Search">
+		<button type="button">Search</button>	
+	</div>
+	<div class="container">
+		<div class="video-detail">Video
+			<!-- <iframe width="560px" height="315px" src="https://www.youtube.com/embed/xH8VQAH6REw" title="Hazrat LOOT As ka Waqia | Full Story of Prophet Loot (AS) All Life Events In Detail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+		</div>
+		<div class="recommendations">Recommendations</div>
+	</div>
+</body>
+</html>
+
+<script src="video.js"></script>
+
+
+
+
+
+

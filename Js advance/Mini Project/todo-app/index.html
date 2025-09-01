@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Todo List App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="screen-backdrop"></div>
+		<div class="home-screen screen">
+			<div class="head-wrapper">
+					<div class="menu-btn">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+					<div class="welcome">
+						<div class="content">
+							<h1>Hello John</h1>
+							<p>Today you have <span class="total-task"></span> tasks</p>
+						</div>
+						<div class="img">
+							<div class="backdrop"></div>
+							<img src="images/boy.png">
+						</div>
+					</div>
+			</div>
+			<!-- Categries Screen -->
+			<div class="categories-wrapper">
+				<div class="categories">
+					<!-- Add Category Section by JS -->
+				</div>
+			</div>
+		</div>
+
+		<!-- Task Screen -->
+		<div class="category-screen screen">
+			<div class="head-wrapper">
+			 	<div class="back-btn">
+			 		<i class="fa-solid fa-arrow-left"></i>
+			 	</div>
+			 	<div class="options">
+					<div class="toggle-btn">
+						<!-- <i class="fa-solid fa-ellipsis-vertical"></i> -->
+					</div>	
+				</div>
+			</div>
+			<div class="category-details">
+				<img src="images/boy.png" id="category-img">
+				<div class="details">
+					<p class="category-task">1 Tasks</p>
+					<h1 class="category-title">Personal</h1>
+				</div>
+			</div>
+			<div class="tasks-wrapper">
+				<div class="tasks">
+					<!-- <div class="task-wrapper">
+						<label for="task" class="task">
+							<input type="checkbox" name="task" id="task">
+							<span class="checkmark">
+								<i class="fa-solid fa-check"></i>
+							</span>
+							<p>Buy a new car</p>
+						</label>
+						<div class="delete">
+							<i class="fa-solid fa-trash"></i>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- Add Task Btn -->
+		<div class="add-task-btn">
+			<i class="fa-solid fa-plus"></i>
+		</div>
+
+		<div class="black-backdrop"></div>
+		<div class="add-task">
+			<div class="add-task-backdrop"></div>
+			<div class="heading">
+				<h1>Add Task</h1>
+			</div>
+			<div class="input-group">
+				<label for="task-input">Task</label>
+				<input type="text" id="task-input" required>
+			</div>
+			<div class="input-group">
+				<label for="task-category">Category</label>
+				<select id="category-select">
+					<option value="" disabled>Select Category</option>
+				</select>
+			</div>
+			<div class="btns">
+				<button class="cancel-btn">Cancel</button>
+				<button class="add-btn">Add</button>
+			</div>
+		</div>
+
+		<div class="popup-backdrop"></div>
+		<div id="popupMessage" class="popup hidden">
+			<h1 class="error">Error Message</h1>
+			<p>Please Enter a Task.</p>
+			<div class="divBtn">
+				<button type="button" class="btn popup-close">Okay</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script src="script.js"></script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        img{
+            width: 100%;
+            max-height: 500px;
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel">
+        <img src="" class="img">
+    </div>
+</body>
+</html>
+<script>
+    let carousel_div = document.getElementById('carousel');
+    function carousel(){
+        let images = ['https://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_hanv9909.jpg','https://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_hnck0391.jpg','https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg']; // Create Array
+        let imgElement = document.querySelector(".img");
+        imgElement.src = images[0];
+        carousel_div.append(imgElement);
+
+        let i = 1;
+        setInterval(function(){
+            if(i === images.length){
+                i = 0;
+            }
+            imgElement.src = images[i];
+            carousel_div.append(imgElement);
+            i++;
+        },3000);
+    };
+    carousel();
+</script>

@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "image_url": "https://i.ibb.co/ccQyL09L/hero-1.jpg",
+      "caption": "abc"
+    },
+    {
+      "id": 2,
+      "caption": "xyz",
+      "image_url": "https://i.ibb.co/Y4NBLP6y/geographic.png"
+    },
+    {
+      "id": 3,
+      "caption": "xyz",
+      "image_url": "https://i.ibb.co/Y4NBLP6y/geographic.png"
+    },
+    {
+      "id": 4,
+      "caption": "xyz",
+      "image_url": "https://i.ibb.co/Y4NBLP6y/geographic.png"
+    },
+    {
+      "id": 5,
+      "caption": "xyz",
+      "image_url": "https://i.ibb.co/Y4NBLP6y/geographic.png"
+    },
+    {
+      "id": 6,
+      "caption": "xyz",
+      "image_url": "https://i.ibb.co/Y4NBLP6y/geographic.png"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

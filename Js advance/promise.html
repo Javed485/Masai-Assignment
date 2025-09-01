@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        #carousel{
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        #carousel img{
+            width: 100%;
+            height: 500px;
+        }
+        #movies{
+            display: inline-grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 5%;
+        }
+        #movies div{
+            display: grid;
+            margin-bottom: 10%;
+            justify-items: center;
+        }
+        #basic{
+            display: block;
+        }
+        #poster{
+            width: 60%;
+        }
+        #loader_div{
+            text-align: center;
+        }
+        #loader_div #loader_gif{
+            width: 5%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hotstar</h1>
+    <div id="carousel"></div>
+    <div id="buttons">
+        <button onclick="sortLH()">Rating: L to H</button>
+        <button onclick="sortHL()">Rating: H to L</button>
+    </div>
+    <div id="loader_div">
+        <img id="loader_gif" src="https://media1.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif?cid=ecf05e47ndp2iu912qul25ssb6aooshhvjiftkvfmg0ogwxv&rid=giphy.gif&ct=g" alt="">
+    </div>
+    <div id="movies"></div>
+</body>
+</html>
+<script>
+    let carousel_div = document.getElementById('carousel');
+    // Carousel Function
+    function carousel(){
+        let images = ['https://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_hanv9909.jpg','https://cdn.wallpapersafari.com/88/43/nBPdKr.jpg','https://wallpaperaccess.com/full/37945.jpg']; // Create Array
+        let imgElement = document.createElement('img'); // Create Element with Img
+        imgElement.src = images[0];  // First Image fix
+        carousel_div.append(imgElement);
+        let i = 1;
+        setInterval(function(){
+            if(i == images.length){
+                i = 0;
+            }
+            imgElement.src = images[i];
+            carousel_div.append(imgElement);
+            i++;
+        }, 3000);
+    }
+    carousel();
+
+    let movies = [
+        {
+            name: 'Munna Michael',
+            rating: 5.5,
+            url: 'https://www.postproductioninstitute.com/wp-content/uploads/2020/01/rajeev-chudasama.jpg'
+        },
+        {
+            name: 'Mohanjodaro',
+            rating: 6,
+            url: 'https://i.pinimg.com/236x/97/5a/f2/975af26c337b52bf88b701631bddc99e--mohenjo-daro-movieposter.jpg'
+        },
+        {
+            name: 'PK',
+            rating: 9.5,
+            url: 'https://bollywoodcinemaposter.com/wp-content/uploads/20171126_121714.jpg'
+        },
+        {
+            name: 'Kabir Singh',
+            rating: 8.5,
+            url: 'https://5.imimg.com/data5/CO/IP/MQ/SELLER-30220222/bollywood-wall-poster-500x500.jpg'
+        },
+        {
+            name: 'Action Juction',
+            rating: 8,
+            url: 'https://im.idiva.com/photogallery/2014/Dec/actionjackson.jpg'
+        },
+        {
+            name: 'Raees',
+            rating: 8.7,
+            url: 'https://www.whoa.in/download/raees-shah-rukh-khan-bollywood-movies-poster'
+        },
+        {
+            name: 'Holiday',
+            rating: 8.9,
+            url: 'https://i.pinimg.com/236x/ab/70/9b/ab709b432e40b76a05ed57daf227790b--hindi-movies-online-bollywood-posters.jpg'
+        },
+        {
+            name: 'Kabil',
+            rating: 7.7,
+            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhrgBEYFJzOoi4pE1OFhRyfNkP9D7uD-ZaQ&usqp=CAU'
+        }
+    ];
+
+    function appendMovie(data){
+        let loader_div = document.getElementById('loader_div');
+        loader_div.style.display = 'none';
+
+        let movies_div = document.getElementById('movies');
+        movies_div.innerHTML = null;
+        
+        data.forEach(function(el){
+            let div = document.createElement('div');
+
+            let img = document.createElement('img');
+            img.id = 'poster';
+            img.src = el.url;
+
+            let m_name = document.createElement('p');
+            m_name.innerHTML = `Name: ${el.name}`;
+
+            let m_rating = document.createElement('p');
+            m_rating.innerHTML = `Rating: ${el.rating}`;
+
+            div.append(img, m_name, m_rating);
+            movies_div.append(div);
+        })
+    }
+    //appendMovie(movies);
+    // Sorting Low to High
+    function sortLH(){
+        let data = movies.sort(function(a,b) { 
+            return a.rating - b.rating
+        } );
+        appendMovie(data);
+    }
+    // Sorting High to Low
+    function sortHL(){
+        let data = movies.sort((a,b) => { return b.rating - a.rating });
+        appendMovie(data);
+    }
+    // promisee Function
+    let getmeData = new Promise(function(resolve, reject){
+        setTimeout(function(){
+            let data = movies;
+            if(data != null){
+                resolve(data);
+            }else{
+                reject('ERR: Sever could not get movies data');
+            }
+        }, 3000);
+    });
+    getmeData
+        .then(function(success){
+            appendMovie(success);
+            //console.log('success', success);
+        })
+        .catch(function(error){
+            console.log('error:', error);
+        })
+</script>
